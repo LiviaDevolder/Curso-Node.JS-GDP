@@ -13,10 +13,13 @@ const Sequelize = require('sequelize')
             dialect: 'mysql'
         })
 // Rotas
-app.get('/cad', function(req, res) {
-    res.render('formulario')
-})
+    app.get('/cad', function(req, res) {
+        res.render('formulario')
+    })
 
+    app.post('/add', function(req, res) {
+        res.send('FORMULARIO RECEBIDO!')
+    })
 
 app.listen(8081, function() {
     console.log("Servidor rodando na url http://localhost:8081")
